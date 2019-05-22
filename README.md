@@ -1,5 +1,5 @@
-# Implementação de Árvore Binária Encadeada em Java
-Operações implementadas com árvore binárias encadeadas:<br>
+# Implementação recursiva de Árvore Binária Encadeada em Java
+Operações implementadas recursivamente com árvore binárias encadeadas:<br>
 - Inserir<br>
 - Excluir<br>
 - Caminhar Pré (ED)<br>
