@@ -68,6 +68,8 @@ public class Arvore {
                 //Valor maior que o dado da raiz
                 if (dado > _raiz.getDado()) {
                     _raiz.setDireita(inserir(_raiz.getDireita(), dado));
+                } else {
+                    System.out.println("Valor já existe na arvore");
                 }
             }
         }

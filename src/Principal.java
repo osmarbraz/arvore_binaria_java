@@ -53,7 +53,7 @@ public class Principal {
         //Laço do menu de opções
         while (opcao != 99) {
             //Monta o menu de opções
-            opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Lista Simplesmente Encadeada ###\n"
+            opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Árvore Binária Recursiva ###\n"
                     + "Selecione a opção desejada:\n"
                     + " 1- Inserir \n"
                     + " 2- Excluir \n"
