@@ -55,8 +55,10 @@ public class Arvore {
     public No inserir(No _raiz, int dado) {
         //Se _raiz está vazia
         if (_raiz == null) {
+            //Declara e instância um novo nó
             No novo = new No();
             novo.setEsquerda(null);
+            //Seta o dado
             novo.setDado(dado);
             novo.setDireita(null);
             _raiz = novo;
@@ -89,7 +91,7 @@ public class Arvore {
             //Continua a busca do sucessor
             _sucessor.setEsquerda(sucessor(_raiz, _sucessor.getEsquerda()));
         } else {
-            //Encontrou o elemento altera do dado da subárvore com o balor do sucessor.
+            //Encontrou o elemento altera do dado da subárvore com o valor do sucessor.
             _raiz.setDado(_sucessor.getDado());
             //Puxa a subárvore da direita para assumir o lugar.
             _sucessor = _sucessor.getDireita();
@@ -373,9 +375,9 @@ public class Arvore {
         int cont = 0;
         //Verifica se a árvore não é nula
         if (_raiz != null) {
-            cont += contarNo(_raiz.getDireita());
-            cont += contarNo(_raiz.getEsquerda());
-            cont += 1;
+            cont = cont + contarNo(_raiz.getDireita());
+            cont = cont + contarNo(_raiz.getEsquerda());
+            cont = cont + 1;
         }
         return cont;
     }
@@ -389,13 +391,18 @@ public class Arvore {
      */
     public boolean procurarValor(No _raiz, int dado) {
         if (_raiz != null) {
+            //Se dado igual a _raiz então encontrou
             if (dado == _raiz.getDado()) {
                 return (true);
             } else {
+                //Se o dado é menor que o valor do nó em _raiz
                 if (dado < _raiz.getDado()) {
+                    //Procura na subárvore da esquerda
                     return (false || procurarValor(_raiz.getEsquerda(), dado));
                 } else {
+                    //Se o dado é maior que o valor do nó em _raiz
                     if (dado > _raiz.getDado()) {
+                        //Procura na subárvore da direita
                         return (false || procurarValor(_raiz.getDireita(), dado));
                     }
                 }
